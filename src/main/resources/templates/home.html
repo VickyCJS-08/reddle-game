@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Think Pannunga!</title>
+  <link rel="stylesheet" th:href="@{/css/home.css}" />
+</head>
+
+<body>
+  <div class="form">
+    <form action="/game" method="get">
+      <div>
+        <img alt="Brain" src="/images/Brain.jpeg" />
+      </div>
+      <div class="welcome">
+        <h1>Welcome Vicky CJS Riddle Game</h1>
+      </div>
+      <div class="alllevel">
+        <div><button class="button" type="submit" name="level" value="1">🟢 Easy</button></div>
+        <div><button class="button" type="submit" name="level" value="2">🟡 Medium</button></div>
+        <div><button class="button" type="submit" name="level" value="3">🔴 Hard</button></div>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>

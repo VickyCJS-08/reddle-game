@@ -1,0 +1,173 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #fefcf3;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width:80vh; 
+    max-width: 1200px;
+    min-height: 80vh;
+    padding: 20px 0;
+    margin-top: 40px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.title {
+    font-family:  'Segoe UI', sans-serif;
+    font-size: 32px;
+    text-align: center;
+    color: #6b0504;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    margin: 10px 0 20px;
+}
+
+.riddle-box {
+    margin-bottom: 20px;
+}
+
+.riddle-question {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #333;
+    align-items: center;
+    text-align: center;
+}
+
+.riddle-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.answer-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    width:60vh;
+}
+
+.answer-input:focus {
+    border-color: #6b0504;
+}
+
+.submit-btn {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #6b0504;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 150px;
+    height:30px;
+}
+
+.submit-btn:hover {
+    background-color: #510302;
+}
+
+.result-text {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #003049;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.next-btn, .back-btn {
+    padding: 10px 16px;
+    text-decoration: none;
+    color: white;
+    background-color: #1d3557;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s;
+    width: 150px;
+    height: 30px;
+    
+}
+
+.next-btn:hover, .back-btn:hover {
+    background-color: #457b9d;
+}
+
+.alart {
+    background-color: #fff3cd;
+    color: #856404;
+    padding: 15px 20px;
+    margin-top: 10px;
+    border: 1px solid #ffeeba;
+    border-radius: 8px;
+    font-size: 15px;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+        margin-top: 20px;
+    }
+
+    .scoreboard {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        font-size: 16px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .riddle-question {
+        font-size: 18px;
+    }
+
+    .answer-input {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .submit-btn,
+    .next-btn,
+    .back-btn {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .nav-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .alart {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Riddle Game - Result</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <link rel="stylesheet" href="/css/result.css" />
+    <link href="https://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet">
+   
+</head>
+<body>
+
+    <div class="score-box">
+        <h1>✨ Riddle Game Completed! ✨</h1>
+        <h2>Your Score: <span th:text="${point}">0</span></h2>
+        <h2>🏆 High Score: <span th:text="${highScore}">0</span></h2>
+
+        <a class="btn" th:href="@{/reset}">Play Again</a>
+        <a class="btn" th:href="@{/}">Back to Home</a>
+    </div>
+
+</body>
+</html>

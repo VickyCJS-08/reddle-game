@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Riddle Game</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <link href="https://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1 class="title">🧩Think Pannunga! – 💡</h1>
+            <div class="scoreboard">
+                <p>🏆 Point: <span th:text="${point}">0</span></p>
+                <p>🔥 High Score: <span th:text="${highScore}">0</span></p>
+            </div>
+        </header>
+
+        <main>
+            <div class="riddle-box">
+                <h2 class="riddle-question" th:text="${riddle.question}">Riddle Question Here</h2>
+
+                <form th:action="@{'/check'(level=${riddle.level})}" method="post" class="riddle-form">
+                    <input type="hidden" name="riddleId" th:value="${riddle.id}" />
+                    <input type="text" name="userAnswer" placeholder="Type your answer..." required
+                        class="answer-input" />
+                    <div class="alart">
+                        <div class="alart">
+                            <p>⚠️ If you want to skip the riddle, remember: ❌ You won’t get any points! 🔙 Also, you
+                                can't go back!</p>
+                        </div>
+
+                    </div>
+                    <p class="result-text" th:if="${result}" th:text="${result}"></p>
+                    <button type="submit" class="submit-btn">🎯 Submit</button>
+                </form>
+
+
+            </div>
+
+            <div class="nav-buttons">
+                <a class="next-btn" th:href="@{'/game'(level=${level})}">🔁 Next Riddle</a>
+                <a class="back-btn" th:href="@{'/'}">🔙 Back to Home</a>
+            </div>
+        </main>
+    </div>
+
+</body>
+
+</html>
